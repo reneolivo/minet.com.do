@@ -22,13 +22,11 @@ $(document).ready(function() {
 		ticker: true,
 		infiniteLoop: true,
 		responsive: false,
-		slideWidth: 250,
+		slideWidth: 300,
 		pager: false,
 		controls: false,
-		speed: 18000,
-		slideMargin: 6,
-		minSlides: 10,
-		maxSlides: 10
+		speed: 1000 * 30,
+		slideMargin: 6
 	});
 
     //Stellar (parallax)
