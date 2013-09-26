@@ -1,0 +1,609 @@
+@charset "UTF-8";
+/*----------------------------------------------------------------------------->>
+MINET
+	
+CREADO EL: 2 de Julio, 2013.
+ULTIMA MODIFICACIÓN: 11 de Julio, 2013.
+>>-----------------------------------------------------------------------------*/
+
+
+/*  FONTS
+--------------------------- */
+@font-face {
+    font-family: 'MuseoSlab500';
+    src: url('../fonts/museo_slab-webfont.eot');
+    src: url('../fonts/museo_slab-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo_slab-webfont.woff') format('woff'),
+         url('../fonts/museo_slab-webfont.ttf') format('truetype'),
+         url('../fonts/museo_slab-webfont.svg#MuseoSlab500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futura__condensed';
+    src: url('../fonts/futura_condensed-webfont.eot');
+    src: url('../fonts/futura_condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/futura_condensed-webfont.woff') format('woff'),
+         url('../fonts/futura_condensed-webfont.ttf') format('truetype'),
+         url('../fonts/futura_condensed-webfont.svg#futura__condensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*	SITE GENERAL
+-----------------------------------------------------------------------------*/
+html, body, #content, .slide {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /*background-image: url(../images/portada.jpg);*/
+    background-color: #efefef;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #000;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+.clear { clear: both; }
+.lastElement { margin-right: 0!important; }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+*+html .clearfix {
+  min-height: 1%;
+}
+
+.resetUl { margin: 0; padding: 0; }
+.resetUl li { list-style: none; }
+
+.slide {
+    position: relative;
+}
+
+#wrapper {
+	margin: 0 auto;
+	position: relative;
+}
+
+.content-wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+
+.texto {
+    position: absolute;
+    z-index: 10;
+}
+
+
+/*  HEADER
+-----------------------------------------------------------------------------*/
+#main-logo {
+    padding: 0;
+    margin: 0;
+}
+
+    #main-logo a {
+        background: url(../images/main-logo.gif) no-repeat;
+        width: 152px;
+        height: 76px;
+        margin: 0 30px 0 0;
+        padding: 0;
+        text-indent: -9999px;
+        float: left;
+        display: block;
+    }
+
+#main-navigation {
+    background: #f5f5f5;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    opacity: .90;
+}
+
+    #main-navigation li {
+        font: 21px 'futura__condensed', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        float: left;
+    }
+
+     #main-navigation ul li a {
+        width: 150px;
+        padding: 23px 0;
+        color: #333;
+        display: block;
+        position: relative;
+        text-decoration: none;
+     }
+         #main-navigation li a span {
+            position: relative;
+            z-index: 2;
+         }
+        
+        #main-navigation li a .numbers {
+            font: 104px 'MuseoSlab500', sans-serif;
+            color: #fff;
+            position: absolute;
+            z-index: 1;
+            top: -20px;
+            left: 50%;
+            margin-left: -60px;
+            opacity: .4;
+        }
+
+    #main-navigation .selected a {
+        border-bottom: 4px solid #3a3a3a;
+    }
+
+
+    #main-navigation .selected .inicio .numbers { color: #eecfbc; }
+    #main-navigation .selected .nosotros .numbers { color: #badded; }
+    #main-navigation .selected .servicios .numbers { color: #e8e4d0; }
+    #main-navigation .selected .clientes .numbers { color: #f8b5b5; }
+    #main-navigation .selected .contacto .numbers { color: #eecfbc; }
+
+
+/*  PORTADA
+-----------------------------------------------------------------------------*/
+#slide1 {
+    background: url(../images/bg/portada.jpg) fixed top no-repeat;
+    width: 100%;
+    height: 1440px;
+}
+
+#slide1 .texto {
+    top: 290px;
+    left: 110px;
+    z-index: 10;
+}
+    #slide1 .texto h3 {
+        font: 74px 'futura__condensed', sans-serif;
+        color: #fff;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    #slide1 .texto h4 {
+        font: 47px 'futura__condensed', sans-serif;
+        color: #fffc00;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+
+.proyectos-recientes {
+    position: absolute;
+    top: 705px;
+    z-index: 15;
+}
+
+    .proyectos-recientes .bx-wrapper {
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+
+    .proyectos-recientes li {
+        background: #000;
+        width: 250px;
+        height: 150px;
+        margin-right: 6px;
+        float: left;
+        overflow: hidden;
+        transform:skew(45deg);
+        -ms-transform:skew(45deg);
+        -webkit-transform:skew(45deg);
+    }    
+
+    .proyectos-recientes li a {
+        display: block;
+        transform:skew(-45deg);
+        -ms-transform:skew(-45deg);
+        -webkit-transform:skew(-45deg);
+        position: relative;
+    }
+        .proyectos-recientes li a hgroup {
+            background: url(../images/bgTransparente-proyectos.png) repeat;
+            width: 320px;
+            height: 46px;
+            padding: 5px 68px;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+        }
+
+            .proyectos-recientes li a hgroup h5 {
+                font: 16px 'Museo Slab';
+                color: #fffc00;
+                margin: 0;
+            }
+            
+            .proyectos-recientes li a hgroup h6 {
+                font: 14px 'Museo Slab';
+                color: #fff;
+                margin: 0 0 0 18px;
+            }
+        
+        .proyectos-recientes li a img {
+            position: relative;
+            left: 50%;
+            margin-left: -207px;
+            z-index: 1;
+        }
+
+
+.giro45g {
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+}
+
+    #slide1 .primer-rombo {
+        background: #f1ebd0;
+        width: 1187px;
+        height: 1187px;
+        top: -682px;
+        left: -761px;
+        z-index: 3;
+        display: none;
+    }
+
+    #slide1 .segundo-rombo {
+        background: #f7a35f url(../images/bg-2dorombo-portada.jpg) no-repeat;
+        width: 1327px;
+        height: 1327px;
+        top: 155px;
+        left: 112px;
+        z-index: 9;
+        display: none;
+    }
+
+    #slide1 .tercer-rombo {
+        background: #fff;
+        width: 1187px;
+        height: 1187px;
+        top: 708px;
+        left: -1022px;
+        /*-webkit-box-shadow:  0 0 8px 1px #848d8d;
+        box-shadow:  0 0 8px 1px #848d8d;*/
+        z-index: 3;
+        display: none;
+    }
+
+
+/*  NOSOTROS
+-----------------------------------------------------------------------------*/
+#slide2 {
+    background: url(../images/bg/nosotros.jpg) center top no-repeat;
+    width: 100%;
+    height: 1440px;
+}
+
+#slide2 .texto {
+    top: 1050px;
+    left: 110px;
+    z-index: 5;
+}
+
+    #slide2 .texto h3 {
+        font: 60px 'futura__condensed', sans-serif;
+        margin: 0 auto 25px auto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #slide2 .texto p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #slide2 .globo-1 {
+        width: 257px;
+        height: 477px;
+        position: absolute;
+        top: 3090px;
+        left: -190px;
+        z-index: 2;
+    }
+
+    #slide2 .globo-2 {
+        width: 398px;
+        height: 331px;
+        position: absolute;
+        top: 990px;
+        left: 463px;
+        z-index: 3;
+    }
+
+    #slide2 .globo-3 {
+        width: 100px;
+        height: 245px;
+        position: absolute;
+        top: 2430px;
+        left: 800px;
+        z-index: 3;
+        opacity: .4;
+    }
+
+    .globo-1 img, .globo-2 img, .globo-3 img {
+        position: absolute;
+    }
+
+    #slide2 .primer-rombo {
+        background: #fff;
+        width: 1187px;
+        height: 1187px;
+        top: -968px;
+        left: -1024px;
+        z-index: 2;
+        -webkit-box-shadow:  0 0 8px 1px #808888;
+        box-shadow:  0 0 8px 1px #808888;
+        display: none;
+    }    
+
+    #slide2 .segundo-rombo {
+        background: #6edbff url(../images/bg-2dorombo-nosotros.jpg) no-repeat;
+        width: 1327px;
+        height: 1327px;
+        top: 1000px;
+        left: 0px;
+        z-index: 1;
+        display: none;
+    }
+
+    #slide2 .primera-barra {
+        background: #ebd681;
+        width: 835px;
+        height: 4000px;
+        top: -140px;
+        left: 100px;
+        z-index: 2;
+        display: none;
+        /*-webkit-box-shadow:  0 0 8px 1px #848d8d;
+        box-shadow:  0 0 8px 1px #848d8d;*/
+    }
+
+
+/*  SERVICIOS
+-----------------------------------------------------------------------------*/
+#slide3 {
+    background: url(../images/bg/servicios.jpg) center top no-repeat;
+    width: 100%;
+    height: 1440px;
+}
+
+    #slide3 .texto {
+        top: 670px;
+        left: 110px;
+        z-index: 5;
+    }
+        #slide3 .texto h3 {
+            font: 100px 'futura__condensed', sans-serif;
+            color: #fff;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #slide3 .texto p {
+            font-size: 15px;
+            text-align: center;
+        }
+
+    #slide3 .primera-barra {
+        background: #ebd681;
+        width: 835px;
+        height: 4200px;
+        top: -1650px;
+        left: -50px;
+        z-index: 2;
+        /*-webkit-box-shadow:  0 0 8px 1px #848d8d;
+        box-shadow:  0 0 8px 1px #848d8d;*/
+    }
+
+
+/*  CLIENTES
+-----------------------------------------------------------------------------*/
+#slide4 {
+    background: #FF0000;
+    position: relative;
+    top: 0;
+    padding-bottom: 230px;
+}
+    #slide4 .bg-title {
+        background: #fbf6e4;
+    }
+
+    #slide4 .texto {
+        z-index: 5;
+        top: 150px;
+        position: relative;
+    }
+        #slide4 .texto h3 {
+            font: 130px 'futura__condensed', sans-serif;
+            color: #FF0000;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #slide4 .texto p {
+            width: 720px;
+            color: #fff;
+            font-size: 17px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .listado-clientes {
+            background: url(../images/bg-proyectos.gif) repeat-y top center;
+            width: 720px;
+            padding-bottom: 200px;
+            margin: 0 auto;
+            position: relative;
+            top: 230px;
+        }
+            .listado-clientes li {
+                float: left;
+                margin: 0 50px 0 0;
+            }
+                .listado-clientes li.lastElement {
+                    margin-top: 200px;
+                    margin-bottom: -100px;
+                }
+                    .listado-clientes li .detalle-proyecto {
+                        display: none;
+                    }
+
+                .listado-clientes li a img {
+                    background: #fff;
+                    width: 330px;
+                    height: 330px;
+                    display: block;
+                    border-radius: 200px;
+                    overflow: hidden;
+                }
+
+
+    #slide4 .primera-barra {
+        background: #fbf6e4;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        z-index: 4;
+        top: 175px;
+    }
+
+
+/*--- DETALLE PROYECTO ---*/
+#proyecto-detalle {
+    background: #fff url(../images/proyecto-detalle-bg-top.gif) no-repeat top center;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    position: absolute;
+    z-index: 50;
+    top: 250px;
+    padding-top: 50px;
+    display: none;
+}
+    #proyecto-detalle .close {
+        background: url(../images/cerrar.png) no-repeat;
+        width: 60px;
+        height: 60px;
+        display: block;
+        position: absolute;
+        top: -30px;
+        right: 0;
+        text-indent: -9999px;
+    }
+
+    #proyecto-detalle h4 {
+        font: 50px 'futura__condensed', sans-serif;
+        color: #4c4c4c;
+        margin: 0 auto 30px auto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #proyecto-detalle .imagenes-proyecto {
+        background: url(../images/mac.jpg) no-repeat;
+        width: 703px;
+        height: 589px;
+        padding: 29px 0 0 31px;
+        margin: 0 auto 50px auto;
+    }
+    
+    #proyecto-detalle .tecnologias-usadas {
+        background: url(../images/tecnologias.jpg) no-repeat;
+        width: 960px;
+        height: 123px;
+        margin: 0 auto 50px auto;
+        padding-top: 20px;
+    }
+        #proyecto-detalle .tecnologias-usadas ul {
+            text-align: center;
+        }
+            #proyecto-detalle .tecnologias-usadas ul li {
+                display: inline-block;
+                margin: 0 20px;
+            }
+
+
+    #proyecto-detalle .datos-proyecto h5 {
+        font: 31px 'futura__condensed', sans-serif;
+        color: #4c4c4c;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    #proyecto-detalle .datos-proyecto .logo-cliente {
+        float: left;
+        margin-right: 15px;
+    }
+
+    #proyecto-detalle .datos-proyecto .descripcion {
+        margin-top: 10px;
+    }
+
+
+
+/*  CONTACTO
+-----------------------------------------------------------------------------*/
+#slide5 {
+    background: #000;
+    position: relative;
+    top: 0;
+    padding-bottom: 1035px;
+}
+    #slide5 .bg-title {
+        background: #fbf6e4;
+    }
+
+    #slide5 .texto {
+        z-index: 5;
+        top: 150px;
+        position: relative;
+    }
+        #slide5 .texto h3 {
+            font: 100px 'futura__condensed', sans-serif;
+            color: #FFF;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #slide5 .texto .contenido {
+            width: 720px;
+            color: #000;
+            font-size: 17px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+
+    #slide5 .primera-barra {
+        background: #fff;
+        width: 100%;
+        height: 600px;
+        position: absolute;
+        z-index: 4;
+        top: 455px;
+    }
