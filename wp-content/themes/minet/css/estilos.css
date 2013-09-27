@@ -209,7 +209,7 @@ body {
         transform:skew(45deg);
         -ms-transform:skew(45deg);
         -webkit-transform:skew(45deg);
-    }    
+    }   
 
     .proyectos-recientes li a {
         display: block;
@@ -227,6 +227,10 @@ body {
             bottom: 0;
             z-index: 2;
         }
+
+        .proyectos-recientes li a:hover hgroup {
+            background: #000;
+        } 
 
             .proyectos-recientes li a hgroup h5 {
                 font: 16px 'Museo Slab';
