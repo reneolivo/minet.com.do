@@ -77,5 +77,22 @@
 		public function getMeta($fieldName) {
 			return get_field($fieldName, $this->ID);
 		}
+
+		### AUTHOR:
+
+		public function getAuthor()
+		{
+			return get_userdata( $this->author );
+		}
+
+		public function getAuthorMeta($metaName)
+		{
+			return get_the_author_meta( $metaName, $this->author );
+		}
+
+		public function getAuthorAvatar($size = 96, $default = '', $alt = FALSE)
+		{
+			return get_avatar( $this->author, $size, $default, $alt );
+		}
 	}
 ?>

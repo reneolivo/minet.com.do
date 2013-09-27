@@ -25,8 +25,10 @@ $(document).ready(function() {
 		slideWidth: 300,
 		pager: false,
 		controls: false,
-		speed: 1000 * 30,
-		slideMargin: 6
+		speed: 1000 * 60,
+		slideMargin: 6,
+        useCSS: false,
+        tickerHover: true
 	});
 
     //Stellar (parallax)

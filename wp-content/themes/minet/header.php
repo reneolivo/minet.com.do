@@ -7,6 +7,7 @@
     <!--CSS-->
     <link href="<?php template_url(); ?>/css/normalize.css" rel="stylesheet" type="text/css" media="all" />
     <link href="<?php template_url(); ?>/css/estilos.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="<?php template_url(); ?>/css/single.css" rel="stylesheet" type="text/css" media="all" />
 
     <!--FONTS-->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -28,7 +29,7 @@
         <header>
             <nav id="main-navigation">
                 <div class="content-wrapper">
-                    <h1 id="main-logo"><a class="button" data-slide="1" href="#">minet</a></h1>
+                    <h1 id="main-logo"><a class="button" data-slide="1" href="<?php base_url(); ?>">minet</a></h1>
                     <ul class="resetUl clearfix">
                         <li data-slide="1"><a class="inicio" href="#"><span>inicio</span><span class="numbers">01</span></a></li>
                         <li data-slide="2"><a class="nosotros" href="#"><span>nosotros</span><span class="numbers">02</span></a></li>

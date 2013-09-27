@@ -17,7 +17,7 @@
                                 <h5><?php $post->title(); ?></h5>
                                 <h6><?php $post->permalink(); ?></h6>
                             </hgroup>
-                            <?php echo $post->thumbnail(array(450,160)); ?>
+                            <?php echo $post->thumbnail(); ?>
                         </a>
                     </li>
                     <?php endforeach; ?>
