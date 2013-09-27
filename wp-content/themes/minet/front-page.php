@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+	extract( require_model( 'mFrontPage' ) );
+	
+	get_header(); 
+?>
 
 <!--CONTENT::[start]-->
     <div id="content" class="clearfix">
@@ -6,96 +10,17 @@
         <section class="slide clearfix" id="slide1" data-slide="1" data-stellar-offset-parent="true" data-stellar-background-ratio="0.5">
             <div class="proyectos-recientes" data-stellar-ratio="5.36">
                 <ul class="resetUl clearfix">
+                	<?php if (isset($recentPosts)) for($i = 0; $i < 15; $i++) foreach($recentPosts as $post): ?>
                     <li>
                         <a href="http://www.google.com.do" target="_blank">
                             <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
+                                <h5><?php $post->title(); ?></h5>
+                                <h6><?php $post->permalink(); ?></h6>
                             </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
+                            <?php echo $post->thumbnail(array(450,160)); ?>
                         </a>
                     </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.google.com.do" target="_blank">
-                            <hgroup>
-                                <h5>Ornare Elit Justo</h5>
-                                <h6>www.daneidyrentacar.ws</h6>
-                            </hgroup>
-                            <img src="<?php template_url(); ?>/images/proyecto-reciente.jpg" width="415" height="157" alt="" />
-                        </a>
-                    </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
 
