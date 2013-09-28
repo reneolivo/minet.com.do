@@ -12,10 +12,10 @@
                 <ul class="resetUl clearfix">
                 	<?php if (isset($recentPosts)) for($i = 0; $i < 15; $i++) foreach($recentPosts as $post): ?>
                     <li>
-                        <a href="http://www.google.com.do" target="_blank">
+                        <a href="<?php $post->permalink(); ?>" target="_blank">
                             <hgroup>
                                 <h5><?php $post->title(); ?></h5>
-                                <h6><?php $post->permalink(); ?></h6>
+                                <h6><?php echo $post->getExcerpt(); ?></h6>
                             </hgroup>
                             <?php echo $post->thumbnail(); ?>
                         </a>

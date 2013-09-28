@@ -12,6 +12,12 @@
 			return get_permalink( $this->ID );
 		}
 		
+		### EXCERPT:
+		
+		public function getExcerpt() {
+			return wp_trim_excerpt( $this->content );
+		}
+		
 		### THUMBNAIL:
 		
 		public function getThumbnail($size = 'thumbnail', $attrs = array()) {
