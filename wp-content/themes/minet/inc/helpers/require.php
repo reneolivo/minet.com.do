@@ -9,7 +9,7 @@
 	}
 	
 	function require_ormClass($name) {
-		$name = strtolower(basename($name));
+		$name = basename($name);
 		
 		require_once(__DIR__ . '/../orm/' . $name . '.php');
 	}

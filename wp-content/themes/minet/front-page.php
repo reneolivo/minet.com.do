@@ -1,6 +1,6 @@
 <?php 
-	extract( require_model( 'mFrontPage' ) );
-	
+    extract( require_model( 'mFrontPage' ) );
+
 	get_header(); 
 ?>
 
@@ -27,8 +27,8 @@
             <div class="content-wrapper">
                 <div class="texto" data-stellar-ratio="3">
                     <hgroup>
-                        <h3>no existe un límite</h3>
-                        <h4>déjate conocer por el mundo</h4>
+                        <h3><?php the_field('inicio-titulo'); ?></h3>
+                        <h4><?php the_field('inicio-sub-titulo'); ?></h4>
                     </hgroup>
                 </div>
 
@@ -42,9 +42,10 @@
         <section class="slide clearfix" id="slide2" data-slide="2" data-stellar-offset-parent="true" data-stellar-vertical-offset="315">
             <div class="content-wrapper">
                 <div class="texto"  data-stellar-ratio="3.5">
-                    <h3>somos minet</h3>
-                    <p>Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.</p>
+                    <h3><?php the_field('nosotros-titulo'); ?></h3>
+                    <div class="contenido">
+                        <?php the_field('nosotros-contenido'); ?>
+                    </div>
                 </div>
 
                 <div class="globo-1" data-stellar-ratio="10"><img src="<?php template_url(); ?>/images/globo-1.png" alt="" /></div>
@@ -57,6 +58,7 @@
             </div>
         </section>
 
+<?php  /*
         <!--Servicios-->
         <section class="slide clearfix" id="slide3" data-slide="3" data-stellar-offset-parent="true" data-stellar-vertical-offset="200">
             <div class="content-wrapper">
@@ -139,14 +141,15 @@
                 </div>
             </div>
         </section>
+        */ ?>
 
         <!--Contacto-->
-        <section class="slide clearfix" id="slide5" data-slide="5" data-stellar-offset-parent="true" data-stellar-vertical-offset="200">
+        <section class="slide clearfix" id="slide3" data-slide="3" data-stellar-offset-parent="true" data-stellar-vertical-offset="200">
             <div class="content-wrapper">
                 <div class="texto">
-                    <h3>contacto</h3>
+                    <h3><?php the_field('contacto-titulo'); ?></h3>
                     <div class="contenido">
-                        <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                        <?php the_field('contacto-contenido'); ?>
                     </div>
                 </div>
             </div>

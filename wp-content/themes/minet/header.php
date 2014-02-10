@@ -33,9 +33,11 @@
                     <ul class="resetUl clearfix">
                         <li data-slide="1"><a class="inicio" href="#"><span>inicio</span><span class="numbers">01</span></a></li>
                         <li data-slide="2"><a class="nosotros" href="#"><span>nosotros</span><span class="numbers">02</span></a></li>
+                        <!--
                         <li data-slide="3"><a class="servicios" href="#"><span>servicios</span><span class="numbers">03</span></a></li>
                         <li data-slide="4"><a class="clientes" href="#"><span>clientes</span><span class="numbers">04</span></a></li>
-                        <li class="lastElement" data-slide="5"><a class="contacto" href="#"><span>contacto</span><span class="numbers">05</span></a></li>
+                        -->
+                        <li class="lastElement" data-slide="3"><a class="contacto" href="#"><span>contacto</span><span class="numbers">05</span></a></li>
                     </ul>
                 </div>
             </nav>
